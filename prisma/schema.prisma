@@ -1,0 +1,130 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+//++++++++++++++++++++++++++++++++++++++++++//
+//---------MODELOS BD PROYECTO FINAL---------
+
+model Tarjeta {
+  no_tarjeta        String      @id
+  titular           String
+  fecha_afiliacion  DateTime
+  fecha_expiracion  DateTime
+  saldo             Float
+
+  cuenta            Cuenta[]
+  pago_servicio     PagoServicio[]
+  
+  // Relación 1 a 1 con Cliente
+  id_cliente        Int         @unique
+  cliente           Cliente     @relation(fields: [id_cliente], references: [id_cliente])
+}
+model TipoServicio {
+  id_tipo_servicio  Int            @id @default(autoincrement())
+  descripcion       String
+  monto             Float        
+  pago_servicio     PagoServicio[]
+}
+
+model PagoServicio {
+  id_pago           Int            @id @default(autoincrement())
+  fecha_pago        DateTime
+  monto             Float        
+  descripcion       String
+  no_cuenta         String
+  no_tarjeta        String?
+  id_tipo_servicio  Int             
+
+  tarjeta           Tarjeta?        @relation(fields: [no_tarjeta], references: [no_tarjeta])
+  tipo_servicio     TipoServicio   @relation(fields: [id_tipo_servicio], references: [id_tipo_servicio])
+  cuenta            Cuenta         @relation(fields: [no_cuenta], references: [no_cuenta])
+}
+
+model Cliente {
+  id_cliente        Int         @id @default(autoincrement())
+  nombres           String
+  apellidos         String
+  telefono          String
+  e_mail            String
+  fecha_nacimiento  DateTime
+  DPI               String      @unique
+  fecha_creacion    DateTime
+
+  cuenta            Cuenta[]
+  usuarios          Usuarios[]
+
+  // Relación 1 a 1 con Tarjeta
+  tarjeta           Tarjeta?
+}
+
+model Cuenta {
+  no_cuenta         String         @id
+  descripcion       String
+  tipo_cuenta       String
+  fecha_creacion    DateTime
+  saldo             Float
+  id_cliente        Int
+  no_tarjeta        String
+
+  cliente           Cliente        @relation(fields: [id_cliente], references: [id_cliente])
+  tarjeta           Tarjeta?       @relation(fields: [no_tarjeta], references: [no_tarjeta])
+  transferencia_origen  Transferencia[] @relation("CuentaOrigen")
+  transferencia_destino Transferencia[] @relation("CuentaDestino")
+  pago_servicio     PagoServicio[]
+}
+
+model Transferencia {
+  id_transferencia  Int            @id @default(autoincrement())
+  monto             Float
+  fecha_transferencia DateTime 
+  descripcion       String
+  no_cuenta_origen  String
+  no_cuenta_destino String
+
+  cuenta_origen     Cuenta         @relation("CuentaOrigen", fields: [no_cuenta_origen], references: [no_cuenta])
+  cuenta_destino    Cuenta         @relation("CuentaDestino", fields: [no_cuenta_destino], references: [no_cuenta])
+}
+
+model Empleado {
+  id_empleado       Int            @id @default(autoincrement())
+  nombres           String
+  apellidos         String
+  telefono          String
+  e_mail            String
+  fecha_nacimiento  DateTime
+  id_rol            Int
+
+  rol               Rol            @relation(fields: [id_rol], references: [id_rol])
+  usuarios          Usuarios[]
+}
+
+model Rol {
+  id_rol            Int            @id @default(autoincrement())
+  descripcion       String
+
+  empleado          Empleado[]
+}
+
+model Usuarios {
+  id_usuario        Int      @id @default(autoincrement())
+  nombre_usuario    String   @unique
+  fecha_creacion    DateTime
+  clave             String
+  descripcion       String
+  id_empleado       Int?
+  id_cliente        Int?
+
+  empleado          Empleado? @relation(fields: [id_empleado], references: [id_empleado])
+  cliente           Cliente?  @relation(fields: [id_cliente], references: [id_cliente])
+}

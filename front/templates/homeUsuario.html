@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/front/styles/homeUsuarioDesing.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="contenedor-salir">
+            <button id="btnLOGOUT" class="salir" type="button">Cerrar Sesion</button>
+        </div>
+        <div class="card1">
+            <div class="rectangulo">
+                <h3>Cuenta</h3>
+            </div>
+            <div class="datos-container">
+                <div class="txt2" id="noCuenta"></div>
+                <div class="txt4" id="nombreCliente"></div>
+                <div class="txt3" id="tipoCuenta" style="font-size: 10px;"></div>
+                <div class="txt1">
+                    <input type="text" id="saldo" class="SaldoEstado" readonly style="background-color: transparent; border: none; text-align: center; font-size: 20px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="card2">
+            <div class="rectangulo2">
+                <h3>Movimientos</h3>
+                <div class="card-container">
+                    <table id="Movimientos">
+                        <thead>
+                            <tr>
+                                <th>ID_pago</th>
+                                <th>Descripcion</th>
+                                <th>tipo_cuenta</th>
+                                <th>fecha_creacion</th>
+                                <th>saldo</th>
+                                <th>estado</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card3">
+            <div class="rectangulo3">
+                <div class="titulo5">Transferencia</div>
+                <div class="card-content">
+                    <div class="buttons">
+                        <a href="/front/templates/transferencia.html" id="btnTrans" class="btnLuz">Ingresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card4">
+            <div class="rectangulo2">
+                <h3>Transacciones</h3>
+                <div class="card-container">
+                    <table id="transaccionesTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Descripción</th>
+                                <th>Monto</th>
+                                <th>Fecha</th>
+                                <th>Cuenta Orig</th>
+                                <th>Cuenta Dest</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card6">
+            <div class="rectangulo3">
+                <div class="titulo5">Servicios</div>
+                <div class="card-content">
+                    <div class="buttons">
+                        <a href="/front/templates/Pago.html" id="btnIngresar" class="btnServicio">Ingresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+  
+
+
+
+    async function inicializarPagina() {
+        const userId = 39;
+        if (userId === null) {
+            console.error('No se pudo obtener el ID del usuario');
+            return;
+        }
+
+        const token = localStorage.getItem('token');
+
+        try {
+            const response = await fetch(`/api/saldo/${userId}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+            if (!response.ok) {
+                throw new Error('Error al obtener el saldo');
+            }
+            const data = await response.json();
+            document.getElementById('saldo').value = `Saldo: Q. ${data.saldo}`;
+            document.getElementById('noCuenta').textContent = `No. Cuenta: ${data.no_cuenta}`;
+            document.getElementById('tipoCuenta').textContent = `Tipo de Cuenta: ${data.tipo_cuenta}`;
+            document.getElementById('nombreCliente').textContent = `Cliente: ${data.nombre_cliente}`;
+        } catch (error) {
+            console.error('Error obteniendo el saldo:', error);
+        }
+
+        try {
+            const response = await fetch(`/api/transacciones/${userId}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+            if (!response.ok) {
+                throw new Error('Error al obtener las transacciones');
+            }
+            const data = await response.json();
+            const tbody = document.querySelector('#transaccionesTable tbody');
+            tbody.innerHTML = '';
+            data.forEach(transaccion => {
+                const row = document.createElement('tr');
+
+                const idCell = document.createElement('td');
+                idCell.textContent = transaccion.id_transferencia;
+                row.appendChild(idCell);
+
+                const descripcionCell = document.createElement('td');
+                descripcionCell.textContent = transaccion.descripcion;
+                row.appendChild(descripcionCell);
+
+                const montoCell = document.createElement('td');
+                montoCell.textContent = transaccion.monto;
+                row.appendChild(montoCell);
+
+                const fechaCell = document.createElement('td');
+                fechaCell.textContent = new Date(transaccion.fecha_transferencia).toLocaleDateString();
+                row.appendChild(fechaCell);
+
+                const cuentaOrigenCell = document.createElement('td');
+                cuentaOrigenCell.textContent = transaccion.cuenta_origen.no_cuenta;
+                row.appendChild(cuentaOrigenCell);
+
+                const cuentaDestinoCell = document.createElement('td');
+                cuentaDestinoCell.textContent = transaccion.cuenta_destino.no_cuenta;
+                row.appendChild(cuentaDestinoCell);
+
+                tbody.appendChild(row);
+            });
+        } catch (error) {
+            console.error('Error obteniendo las transacciones:', error);
+        }
+
+        document.getElementById('btnLOGOUT').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error('Error al cerrar sesión');
+                }
+                const data = await response.json();
+                alert(data.message);
+                localStorage.removeItem('token'); // Elimina el token del almacenamiento local
+                window.location.href = '/login.html';
+            } catch (error) {
+                console.error('Error cerrando sesión:', error);
+                alert('Error al cerrar sesión');
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', inicializarPagina);
+    </script>
+</body>
+</html>

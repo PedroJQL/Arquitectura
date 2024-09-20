@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/front/styles/homeAddSaldo.css">
+</head>
+<body>
+    <div class="card-container">
+       
+        <div class="contenedor-salir">
+            <button id="btnLOGOUT" class="salir" type="button">Cerrar Sesion</button>
+        </div>
+        <div class="card2">
+            <div class="rectangulo2">
+                <h3>Agregar saldo</h3>
+                <div class="card-container">
+                    <h4>Agregar saldo a cuenta</h4>
+                    <h4></h4>
+                    <h4></h4>
+                    <a href="#" id="btnIngresar" class="btn2">Ingresar</a>
+                    <script>
+                        // Seleccionar el botón por su id
+                        var btnIngresar = document.getElementById('btnIngresar');
+                    
+                        // Agregar un event listener para el clic en el botón
+                        btnIngresar.addEventListener('click', function(event) {
+                            // Prevenir el comportamiento predeterminado del enlace
+                            event.preventDefault();
+                    
+                            // Redirigir al usuario al formulario PerfilAddSaldo.html
+                            window.location.href = '/front/templates/PerfilAddSaldo.html';
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+
+       <div class="card3">
+            <div class="rectangulo3">
+                <div class="titulo5">Servicios</div>
+                <div class="card-content">
+                    <div class="services">
+                        <h4>Pagar Servicios</h4>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" id="btnIngresar1" class="btnLuz">Ingresar</a>
+                        <script>
+                            // Seleccionar el botón por su id
+                            var btnIngresar = document.getElementById('btnIngresar1');
+                        
+                            // Agregar un event listener para el clic en el botón
+                            btnIngresar.addEventListener('click', function(event) {
+                                // Prevenir el comportamiento predeterminado del enlace
+                                event.preventDefault();
+                        
+                                // Redirigir al usuario al formulario PerfilAddSaldo.html
+                                window.location.href = '/front/templates/PagoC.html';
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+
+       
+    <script src=""></script>
+</body>
+</html>
+ 

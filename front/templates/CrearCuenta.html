@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/front/styles/Cuenta.css">
+</head>
+<body>
+    <div class="card-container">
+       
+        <a href="homeCuentas.html" class="btnGuardar">Regresar</a>
+        <div class="card3">
+            <div class="rectangulo3">
+                <div class="titulo5">Crear Cuenta</div>
+                <div class="card-content">
+                    <div class="services">
+                        <h4>No. Cuenta</h4>
+                        <h4></h4>   
+                        <h4>Descripción</h4>
+                        <h4></h4>
+                        <h4></h4>
+                        <h4>Tipo de Cuenta</h4>
+                        <h4></h4>
+                        <h4>Fecha de Creación</h4>
+                        <h4></h4>
+                        <h4>Saldo</h4>
+                        <h4></h4>
+                        <h4>Código Cliente</h4>
+                        <h4></h4>
+                        <!-- Agregar esto en tu HTML donde quieras mostrar el nombre del cliente -->
+                        <h4>Nombre del Cliente: </h4>
+                        <h4></h4>
+                        <h4></h4>
+                        <h4>No. Tarjeta</h4>
+                    </div>
+                    <div class="buttons">
+                        <input type="text" id="noCuenta"  class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="descripcionC" class="cMonto">
+                        <h4></h4>
+                        <h4></h4>
+                        <h4></h4>
+                        <select class="Stipo_Cuenta" id="tipoCuenta"> <!-- Cambiado de "TipoC" a "tipoCuenta" -->
+                            <option>Seleccione</option>
+                            <option value="Ahorro">Ahorro</option>
+                            <option value="Monetaria">Monetaria</option>
+                        </select>                        
+                        <h4></h4>
+                        <input type="text" id="creacionC"  class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="saldoC" class="cMonto">                       
+                        <h4></h4>
+                        <input type="text" id="idClienteC" class="cMonto">
+                        <h4></h4>
+                        <div type="text" id="nombreC" class="cMonto"><span id="nombreCliente" readonly  ></span></div>
+                        <!-- <input  > -->
+                        <h4></h4>
+                        <input type="text" id="noTarjeta" class="cMonto" readonly>
+                    </div>
+                    <button type="button"  id="btnGuardarCu" class="btnGuardar" >Crear</button>
+                   
+                </div>
+            </div>
+        </div>        
+    </div>
+</body>
+<script src="crearcuenta.js"></script>
+</html>
+ 

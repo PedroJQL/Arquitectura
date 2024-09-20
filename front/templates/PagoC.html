@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Pago.css">
+</head>
+<body>
+    <div class="card-container">
+        <a href="homeAddSaldo.html" class="btnGuardar">Regresar</a>
+        <div class="card3">
+            <div class="rectangulo3">
+                <div class="titulo5">Pagar</div>
+                <div class="card-content">
+                    <div class="services">
+                        <h4>Servicio</h4>
+                        <h4></h4>
+                        <h4>Monto a Pagar</h4>
+                        <h4></h4>
+                        <h4>Descripcion</h4>
+                        <h4></h4>
+                        <h4>Fecha</h4>
+                        <h4></h4>
+                        <h4>No. Tarjeta</h4>
+                    </div>
+                    
+
+
+                    
+                    <div class="buttons">
+                        <select class="SPagos" id="pagos">
+                            <option>Seleccione</option>
+                            <option value="1">Energía eléctrica</option>
+                            <option value="2">Agua potable</option>
+                            <option value="3">Telefonía</option>
+                        </select>
+                        <h4></h4>
+                        <input type="text" id="Monto" class="cMonto" readonly>
+                        <h4></h4>
+                        <input type="text" id="Descripcion" class="cNoTarjeta">
+                        <h4></h4>
+                        <input type="text" id="Fecha" class="cNoTarjeta" readonly>
+                        <h4></h4>
+                        <input type="text" id="NoTarjeta" class="cNoTarjeta">
+                    </div>
+                    <button type="button" id="btnPagar" class="btnGuardar">Pagar</button>
+                    <p id="saldoActual"></p> <!-- Campo para mostrar el saldo actual -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="pagoc.js"></script>
+</body>
+</html>

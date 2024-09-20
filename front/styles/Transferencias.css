@@ -1,0 +1,363 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Yu Gothic", sans-serif;
+ } 
+ 
+ body{
+   background-color: #4975da;
+ }
+ 
+ .card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0px;
+ }
+ 
+ .card-container2{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-top: 0px;
+ }
+ 
+ 
+ .card2{
+    width: 600px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /*Deja el elemento estatico!  */
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+ }
+ .card3{
+    width: 800px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden; /*Deja el elemento estatico!  */
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+ }
+ 
+ 
+ .card img{
+ width:  100%;
+ height: auto;
+ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .card-container{
+    padding: 5px;
+ }
+ 
+ 
+ .card-container h3{
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-family: "Yu Gothic", sans-serif;
+  font-weight: 500;
+  left: 0%;
+  top: 2px;
+ }
+ 
+ 
+ .card-container h4{
+   position: relative;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-left: 20px;
+   font-size: 20px;
+   margin-bottom: 5px;
+   font-family: "Yu Gothic", sans-serif;
+   font-weight: 500;
+   left: 0%;
+   top: 2px;
+  }
+ 
+ 
+ .card-container .rectangulo2{
+   display: inline-block;
+    height: 43px;
+    width: 600px;
+    border-radius: 10px;
+    background-color: #DAE6F4;
+    top: 10px;
+    border: #17CE6B;
+ }
+ 
+ .card-container .rectangulo3{
+    display: inline-block;
+     height: 43px;
+     width: 800px;
+     border-radius: 10px;
+     background-color: #DAE6F4;
+     top: 10px;
+     border: #17CE6B;
+     padding: 20px;
+     border-radius: 10px;
+  }
+  
+  
+ 
+ .card-content {
+    display: flex;
+    width: 100%;
+ }
+ 
+ .services, .buttons {
+    width: 50%;
+    display: flex;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .services p {
+    margin: 10px;
+ }
+ 
+ 
+ .card-container .btn1{
+    display: inline-block;
+    padding: 5px 16px;
+    background-color: #17CE6B; 
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 7px;
+    color: #fff;
+    width: 160.05px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 13px;
+    top: 50px;
+ }
+ 
+ .card-container .btn2{
+    display: inline-block;
+    background-color: #DAE6F4; 
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 7px;
+    color: black;
+    width: 120px;
+    height: 35px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 13px;
+    padding-right: 0px;
+    text-align: center;
+ }
+ .buttons .btn3 {
+    display: inline-block;
+    padding: 5px 16px;
+    background-color: #17CE6B;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    color: #fff;
+    width: 80px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 13px;
+    text-align: center;
+ }
+ 
+ .card-container .btn4{
+   display: inline-block;
+     margin-top: auto; /* Empuja el botón al final */
+     background-color: #DAE6F4;
+     text-decoration: none;
+     border-radius: 4px;
+     color: black;
+     width: 120px;
+     height: 35px;
+     font-family: "Yu Gothic", sans-serif;
+     font-size: 13px;
+     text-align: center;
+ 
+ 
+ }
+ 
+ .card-container .btnGuardar{
+    display: inline-block;
+    background-color: #DAE6F4; 
+    text-decoration: none;
+    border-radius: 0.5rem;
+    margin-top: 7px;
+    color: black;
+    width: 140px;
+    height: 40px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 12px;
+    padding-right: 0px;
+    text-align: center;
+    border: 2px solid white;
+ }
+  
+  
+ .card-container .SaldoEstado{
+   position: relative;
+   top: 10px;
+   width: 325px; /* Ancho del input */
+   height: 150px;
+   border: none; /* Quita el borde */
+   border-radius: 5px; /* Bordes redondeados */
+   font-size: 16px; /* Tamaño de fuente */
+   outline: none; /* Elimina el borde predeterminado de enfoque */
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 5px rgba(255, 255, 255, 0.5); /* Cambia el color del borde al obtener el foco */
+ }
+ 
+ .titulo5{
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: "Yu Gothic", sans-serif;
+    font-weight: 500;
+    left: 0%;
+    top: -20px;
+ }
+ 
+ .card4 table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+ }
+ 
+ .card4 table th, .card4 table td {
+    padding: 8px;
+    text-align: left;
+    border-radius: 10px;
+ }
+ 
+ .card4 table th {
+    background-color: hsl(0, 0%, 100%);
+    color: rgb(0, 0, 0);
+ }
+ 
+ 
+ .card-container .SaldoEstado{
+    position: relative;
+    text-align: center;
+    background-color: #DAE6F4;
+    top: 10px;
+    width: 200px; /* Ancho del input */
+    height: 50px;
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    outline: none; /* Elimina el borde predeterminado de enfoque */
+  }
+ 
+  .card-container .cUsuario{
+    position: relative;
+    text-align: center;
+    background-color: #DAE6F4;
+    top: 10px;
+    width: 200px; /* Ancho del input */
+    height: 50px;
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    outline: none; /* Elimina el borde predeterminado de enfoque */
+  }
+ 
+  .card-container .cApellido{
+    position: relative;
+    text-align: center;
+    background-color: #DAE6F4;
+    top: 10px;
+    width: 200px; /* Ancho del input */
+    height: 50px;
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    outline: none; /* Elimina el borde predeterminado de enfoque */
+  }
+  
+  .card-container .cDescripcion{
+    position: relative;
+    text-align: center;
+    background-color: #DAE6F4;
+    top: 10px;
+    width: 200px; /* Ancho del input */
+    height: 50px;
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    outline: none; /* Elimina el borde predeterminado de enfoque */
+  }
+ 
+  .card-container .cNoTarjeta{
+    position: relative;
+    text-align: center;
+    background-color: #DAE6F4;
+    top: 10px;
+    width: 200px; /* Ancho del input */
+    height: 50px;
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    outline: none; /* Elimina el borde predeterminado de enfoque */
+  }
+ 
+  .card-container .cTipoTarjeta{
+    position: relative;
+    text-align: center;
+    background-color: #DAE6F4;
+    top: 10px;
+    width: 200px; /* Ancho del input */
+    height: 50px;
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    outline: none; /* Elimina el borde predeterminado de enfoque */
+  }
+ 
+  .card-container .cTipoCuenta{
+    position: relative;
+    text-align: center;
+    background-color: #DAE6F4;
+    top: 10px;
+    width: 200px; /* Ancho del input */
+    height: 50px;
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    outline: none; /* Elimina el borde predeterminado de enfoque */
+  }
+ 
+  .card-container .cSaldo{
+    position: relative;
+    text-align: center;
+    background-color: #DAE6F4;
+    top: 10px;
+    width: 200px; /* Ancho del input */
+    height: 50px;
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    outline: none; /* Elimina el borde predeterminado de enfoque */
+  }
+ 
+  
+  .card-container .cMonto{
+    position: relative;
+    text-align: center;
+    background-color: #DAE6F4;
+    top: 10px;
+    width: 200px; /* Ancho del input */
+    height: 50px;
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 20px; /* Tamaño de fuente */
+    outline: none; /* Elimina el borde predeterminado de enfoque */
+  }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/front/styles/homeCuentasDesing.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="contenedor-salir">
+            <button id="btnLOGOUT" class="salir" type="button">Cerrar Sesion</button>
+        </div>
+        <div class="card1">
+            
+            <div class="rectangulo">
+                <h3>Clientes</h3>
+                <div class="card-container">
+                    <h4>Agregar Clientes</h4>
+                    <h4></h4>
+                    <h4></h4>
+                    <a href="#" id="btnIngresarC" class="btn2">Ingresar</a>
+                    <script>
+                        // Seleccionar el botón por su id
+                        var btnIngresar = document.getElementById('btnIngresarC');
+                    
+                        // Agregar un event listener para el clic en el botón
+                        btnIngresar.addEventListener('click', function(event) {
+                            // Prevenir el comportamiento predeterminado del enlace
+                            event.preventDefault();
+                    
+                            // Redirigir al usuario al formulario PerfilAddSaldo.html
+                            window.location.href = '/front/templates/CrearCliente.html';
+                        });
+                    </script>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="card2">
+            <div class="rectangulo2">
+                <h3>Crear Cuenta</h3>
+                <div class="card-container">
+                    <h4>Crear Cuenta</h4>
+                    <h4></h4>
+                    <h4></h4>
+                    <a href="#" id="btnIngresar" class="btn2">Ingresar</a>
+                    <script>
+                        // Seleccionar el botón por su id
+                        var btnIngresar = document.getElementById('btnIngresar');
+                    
+                        // Agregar un event listener para el clic en el botón
+                        btnIngresar.addEventListener('click', function(event) {
+                            // Prevenir el comportamiento predeterminado del enlace
+                            event.preventDefault();
+                    
+                            // Redirigir al usuario al formulario PerfilAddSaldo.html
+                            window.location.href = '/front/templates/CrearCuenta.html';
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="card1">
+            <div class="rectangulo3">
+                <div class="titulo5">Empleado</div>
+                <div class="card-container">
+                    <h4>Agregar Empleados</h4>
+                    <h4></h4>
+                    <h4></h4>
+                    <a href="#" id="btnIngresarE" class="btn2">Ingresar</a>
+                    <script>
+                        // Seleccionar el botón por su id
+                        var btnIngresar = document.getElementById('btnIngresarE');
+                    
+                        // Agregar un event listener para el clic en el botón
+                        btnIngresar.addEventListener('click', function(event) {
+                            // Prevenir el comportamiento predeterminado del enlace
+                            event.preventDefault();
+                    
+                            // Redirigir al usuario al formulario PerfilAddSaldo.html
+                            window.location.href = '/front/templates/CrearEmpleado.html';
+                        });
+                    </script>
+                </div>
+            </div>
+
+        </div> 
+
+        
+
+        <div class="card1">
+            <div class="rectangulo3">
+                <div class="titulo5">Usuarios</div>
+                <div class="card-container">
+                    <h4>Crear Usuarios</h4>
+                    <h4></h4>
+                    <h4></h4>
+                    <a href="#" id="btnIngresarU" class="btn2">Ingresar</a>
+                    <script>
+                        // Seleccionar el botón por su id
+                        var btnIngresar = document.getElementById('btnIngresarU');
+                    
+                        // Agregar un event listener para el clic en el botón
+                        btnIngresar.addEventListener('click', function(event) {
+                            // Prevenir el comportamiento predeterminado del enlace
+                            event.preventDefault();
+                    
+                            // Redirigir al usuario al formulario PerfilAddSaldo.html
+                            window.location.href = '/front/templates/CrearUsuario.html';
+                        });
+                    </script>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </div>
+</body>
+<script src="transacciones.js"></script>
+<script src="SaldoEs.js"></script>
+</html>

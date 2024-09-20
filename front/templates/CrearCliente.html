@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/front/styles/Clientes.css">
+</head>
+<body>
+    <div class="card-container">
+        <a href="homeCuentas.html" class="btnGuardar">Regresar</a>
+        <div class="card3" id="formCrearCliente">
+            <div class="rectangulo3">
+                <div class="titulo5">Crear Cliente</div>
+                <div class="card-content">
+                    <div class="services">
+                        <h4>Nombres</h4>
+                        <h4></h4>   
+                        <h4>Apellidos</h4>
+                        <h4></h4>
+                        <h4>Telefono</h4>
+                        <h4></h4>
+                        <h4>E-mail</h4>
+                        <h4></h4>
+                        <h4>fecha nacimiento.</h4>
+                        <h4></h4>
+                        <h4>DPI</h4>
+                        <h4></h4>
+                        <h4>fecha creación.</h4>
+                    </div>
+                    <div class="buttons">
+                        <input type="text" id="nombreC"  class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="apellidoC" class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="telefonoC" class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="correoC"  class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="nacimientoC" class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="dpiC" class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="creacionC" class="cMonto">
+                    </div>
+                    <button type="button"  id="btnGuardarC" class="btnGuardar" >Crear</button>
+                   
+                </div>
+            </div>
+        </div>     
+
+        <!--PARA AÑADIR LAS TARJETAS-->
+        <div class="card4">
+            <div class="rectangulo3">
+                <div class="titulo5">AÑADIR TARJETA</div>
+                <div class="card-content">
+                    <div class="services">
+                        <h4>No. Tarjeta</h4>
+                        <h4></h4>   
+                        <h4>Titular</h4>
+                        <h4></h4>
+                        <h4>Fecha Afiliación</h4>
+                        <h4></h4>
+                        <h4>Saldo</h4>
+                        
+                    </div>
+                    <div class="buttons">
+                        <input type="text" id="noTarjeta"  class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="titularT" class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="afiliacionT" class="cMonto">
+                        <h4></h4>
+                        <input type="text" id="saldoT"  class="cMonto">
+                       <!-- Campo oculto para el ID del cliente -->
+                         <input type="hidden" id="id_cliente">
+                    </div>
+                    <button type="button"  id="btnGuardarT" class="btnGuardar" >Crear</button>
+                   
+                </div>
+            </div>
+        </div>   
+    </div>
+</body>
+<script src="crearCliente.js"></script>
+</html>
+ 

@@ -1,0 +1,442 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Yu Gothic", sans-serif;
+ } 
+ 
+ body{
+   background-color: #4975da;
+    
+ }
+ 
+ .card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0px;
+   
+ }
+ 
+ .card-container2{
+   display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    font-size: 10px;
+ }
+ 
+ 
+ .card1{
+    width: 350px;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden; /*Deja el elemento estatico!  */
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+    grid-area: 
+
+    "rectangulo"
+    "datos-contianer";
+ }
+ .card2{
+    width: 450px;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden; /*Deja el elemento estatico!  */
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Habilita el scroll vertical */
+    max-height: 400px; /* Define la altura máxima */
+    font-size: 10px;
+ }
+ .card3{
+    width: 350px;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden; /*Deja el elemento estatico!  */
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+ }
+ 
+  .card4{
+   display: flex;
+   width: 450px;
+   background-color: #fff;
+   border-radius: 1rem;
+   overflow: hidden;
+   margin: 20px;
+   text-align: center;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+   overflow-y: auto; /* Habilita el scroll vertical */
+   max-height: 400px; /* Define la altura máxima */
+   font-size: 10px;
+  }
+ 
+ 
+  .card5{
+   width: 10px;
+    height: 180px;  
+    border-radius: 8px;
+    overflow: hidden; /*Deja el elemento estatico!  */
+    margin: 10px;
+    text-align: center;
+
+ 
+    
+  }
+  
+  .card6{
+    width: 350px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden; /*Deja el elemento estatico!  */
+    margin: 20px;
+    text-align: center;
+   /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);*/
+  }
+ 
+ 
+ .card img{
+ width:  100%;
+ height: auto;
+ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .card-container{
+    padding: 5px;
+ }
+ 
+ 
+ .card-container h3{
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-family: "Yu Gothic", sans-serif;
+  font-weight: 500;
+  left: 0%;
+  top: 2px;
+ }
+ 
+ 
+ .card-container h4{
+   position: relative;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-left: 20px;
+   font-size: 20px;
+   margin-bottom: 5px;
+   font-family: "Yu Gothic", sans-serif;
+   font-weight: 500;
+   left: 0%;
+   top: 2px;
+  }
+  .card-container .rectangulo0{
+    display: inline-block;
+     height: 40px;
+     width: 350px;
+     border-radius: 10px;
+     background-color: #4975da;
+     top: 10px;
+     border: #17CE6B;
+  }
+ 
+ .card-container .rectangulo{
+   display: inline-block;
+    height: 43px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: #DAE6F4;
+    top: 10px;
+    border: #17CE6B;
+ }
+ .card-container .rectangulo2{
+   display: inline-block;
+    height: 43px;
+    width: 450px;
+    border-radius: 10px;
+    background-color: #DAE6F4;
+    top: 10px;
+    border: #17CE6B;
+ }
+ 
+ .card-container .rectangulo3{
+    display: inline-block;
+     height: 43px;
+     width: 350px;
+     border-radius: 10px;
+     background-color: #DAE6F4;
+     top: 10px;
+     border: #17CE6B;
+     padding: 20px;
+     border-radius: 10px;
+     text-align: center;
+   
+  }
+  .datos-container{
+   height: 100%;
+   width: 100%;
+  }
+  
+ 
+ .card-content {
+    display: flex;
+    width: 100%;
+ }
+ 
+ .services, .buttons {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .services p {
+    margin: 10px;
+ }
+ 
+ 
+ .card-container .btn1{
+    display: inline-block;
+    padding: 5px 16px;
+    background-color: #17CE6B; 
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 7px;
+    color: #fff;
+    width: 160.05px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 13px;
+    top: 50px;
+ }
+ 
+ .card-container .btn2{
+    display: inline-block;
+    background-color: #DAE6F4; 
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 7px;
+    color: black;
+    width: 120px;
+    height: 35px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 13px;
+    padding-right: 0px;
+    text-align: center;
+ }
+ .buttons .btn3 {
+    display: inline-block;
+    padding: 5px 16px;
+    background-color: #17CE6B;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    color: #fff;
+    width: 80px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 13px;
+    text-align: center;
+ }
+ 
+ .card-container .btn4{
+   display: inline-block;
+     margin-top: auto; /* Empuja el botón al final */
+     background-color: #DAE6F4;
+     text-decoration: none;
+     border-radius: 4px;
+     color: black;
+     width: 120px;
+     height: 35px;
+     font-family: "Yu Gothic", sans-serif;
+     font-size: 13px;
+     text-align: center;
+ 
+ 
+ }
+ 
+ .card-container .btnLuz{
+   position: relative;
+    display: inline-block;
+    background-color: #DAE6F4; 
+    text-decoration: none;
+    border-radius: 0.5rem;
+    margin-top: 7px;
+    color: black;
+    width: 150px;
+    height: 50px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 13px;
+    padding-right: 0px;
+    text-align: center;
+    left: 80px;
+    top: 50px;
+ }
+  
+ .card-container .btnServicio{
+   position: relative;
+    display: inline-block;
+    background-color: #DAE6F4; 
+    text-decoration: none;
+    border-radius: 0.5rem;
+    margin-top: 7px;
+    color: black;
+    width: 150px;
+    height: 50px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 13px;
+    padding-right: 0px;
+    text-align: center;
+    left: 75px;
+    top: 70px;
+ }
+
+ .card-container .btnAgua{
+    display: inline-block;
+    background-color: #DAE6F4; 
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 7px;
+    color: black;
+    width: 120px;
+    height: 35px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 13px;
+    padding-right: 0px;
+    text-align: center;
+ }
+ 
+ .card-container .btnInternet{
+    display: inline-block;
+    background-color: #DAE6F4; 
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 7px;
+    color: black;
+    width: 120px;
+    height: 35px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 13px;
+    padding-right: 0px;
+    text-align: center;
+ }
+  
+
+
+ 
+.card-container  .saldoEstado{
+   position: relative;
+   top: 10px;
+   background-color: #4975da;
+   width: 325px; /* Ancho del input */
+   height: 150px;
+   border: 1px solid #ffffff; /* Quita el borde */
+   border-radius: 5px; /* Bordes redondeados */
+   font-size: 16px; /* Tamaño de fuente */
+   outline: none; /* Elimina el borde predeterminado de enfoque */
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 5px rgba(255, 255, 255, 0.5); /* Cambia el color del borde al obtener el foco */
+   display: grid;
+   grid-template-columns: 1;
+   grid-row: 4;
+   grid-template-areas: 
+   "1"
+   "2"
+   "3"
+   "4";
+ }
+ 
+ .txt1{
+   grid-area: "1";
+ }
+ .txt2{
+   grid-area: "2";
+ }
+ .txt3{
+   grid-area: "3";
+ }
+ .txt4{
+   grid-area: "4";
+ }
+ .titulo5{
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: "Yu Gothic", sans-serif;
+    font-weight: 500;
+    left: 0%;
+    top: -20px;
+   
+ }
+ 
+ .card4 table {
+   padding: 8px;
+   text-align: left;
+   border-radius: 10px;
+ }
+ 
+ .card4 table th, .card4 table td {
+   padding: 8px;
+   text-align: left;
+   border-radius: 10px;
+ }
+ 
+ .card4 table th {
+   background-color: hsl(0, 0%, 100%);
+   color: rgb(0, 0, 0);
+ }
+ 
+ .contenedor-salir{
+   width: 100%;
+   height: 100%;
+ }
+ .salir{
+   display: inline-block;
+   position: relative;
+    background-color: #DAE6F4;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 7px;
+    color: black;
+    width: 140px;
+    height: 40px;
+    font-family: "Yu Gothic", sans-serif;
+    font-size: 10px;
+    padding-right: 0px;
+    text-align: center;
+ }
+
+
+
+ 
+ 
+ .card2 table {
+   padding: 8px;
+   text-align: left;
+   border-radius: 10px;
+   font-size: 12px;
+ }
+ 
+ .card2 table th, .card2 table td {
+   padding: 8px;
+   text-align: left;
+   border-radius: 10px;
+ }
+ 
+ .card2 table th {
+   background-color: hsl(0, 0%, 100%);
+   color: rgb(0, 0, 0);
+ }
